@@ -42,6 +42,11 @@ export const topics: Topic[] = [
     summary: "Browser, desktop, MCP and the CLI.",
   },
   {
+    slug: "code-review",
+    title: "Code & PRs",
+    summary: "Reviewing agent work in the editor and shipping pull requests.",
+  },
+  {
     slug: "wrap-up",
     title: "Wrap-up",
     summary: "Takeaways and where to go next.",
