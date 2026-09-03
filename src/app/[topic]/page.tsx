@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { getSlide } from "@/content/slides";
 import { getNeighbours, getTopic, getTopicIndex, topics } from "@/content/topics";
 
 export function generateStaticParams() {
@@ -19,6 +20,7 @@ export default async function TopicPage({ params }: PageProps<"/[topic]">) {
   if (!topic) notFound();
 
   const { previous, next } = getNeighbours(slug);
+  const slide = getSlide(slug);
 
   return (
     <article className="flex min-h-full flex-col gap-10">
@@ -30,10 +32,11 @@ export default async function TopicPage({ params }: PageProps<"/[topic]">) {
         <p className="text-lg text-muted">{topic.summary}</p>
       </header>
 
-      {/* Presentation content for this topic goes here. */}
-      <section className="flex flex-1 items-center justify-center rounded-xl border border-dashed border-border p-16 text-sm text-muted">
-        Content for “{topic.title}” goes here.
-      </section>
+      {slide ?? (
+        <section className="flex flex-1 items-center justify-center rounded-xl border border-dashed border-border p-16 text-sm text-muted">
+          Content for “{topic.title}” goes here.
+        </section>
+      )}
 
       <nav className="flex items-center justify-between border-t border-border pt-6 text-sm">
         {previous ? (

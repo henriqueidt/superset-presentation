@@ -12,9 +12,19 @@ export type Topic = {
 
 export const topics: Topic[] = [
   {
-    slug: "intro",
-    title: "Intro",
-    summary: "What superset.sh is and the problem it solves.",
+    slug: "problem",
+    title: "The problem",
+    summary: "One repo, one checkout, one agent at a time.",
+  },
+  {
+    slug: "what-it-is",
+    title: "What it is",
+    summary: "A workbench for coding agents.",
+  },
+  {
+    slug: "the-shift",
+    title: "The shift",
+    summary: "What changes once every agent has its own workspace.",
   },
   {
     slug: "workspaces",
@@ -22,34 +32,19 @@ export const topics: Topic[] = [
     summary: "Isolated git worktrees that boot ready to code.",
   },
   {
-    slug: "agents",
-    title: "Agents",
-    summary: "Running coding agents in a workspace.",
-  },
-  {
-    slug: "orchestration",
-    title: "Orchestration",
-    summary: "Fanning work out across parallel agents.",
-  },
-  {
-    slug: "automations",
-    title: "Automations",
-    summary: "Recurring agents on a schedule.",
-  },
-  {
-    slug: "integrations",
-    title: "Integrations",
-    summary: "Browser, desktop, MCP and the CLI.",
-  },
-  {
     slug: "code-review",
     title: "Code & PRs",
     summary: "Reviewing agent work in the editor and shipping pull requests.",
   },
   {
-    slug: "wrap-up",
-    title: "Wrap-up",
-    summary: "Takeaways and where to go next.",
+    slug: "other-features",
+    title: "Other features",
+    summary: "The rest of what superset.sh does.",
+  },
+  {
+    slug: "conclusion",
+    title: "Conclusion",
+    summary: "Where this leaves you.",
   },
 ];
 
